@@ -55,7 +55,7 @@ namespace WorldData.Models
       MySqlConnection conn = DB.Connection();
            conn.Open();
            MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-           cmd.CommandText = @"SELECT * FROM city WHERE Name LIKE "+ start + '%'+";";
+           cmd.CommandText = @"SELECT * FROM city WHERE Name LIKE '"+ start + "%'"+";";
            MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
            while(rdr.Read())
            {
