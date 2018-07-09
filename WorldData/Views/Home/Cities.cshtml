@@ -2,5 +2,5 @@
 <h2>Cities</h2>
 <ul>
   @foreach (var city in Model)
-  {<li>"@city.GetPopulation()"</li>}
+  {<li><strong>@city.GetName()</strong>  <br>Population @city.GetPopulation() (@city.GetId())<br></li>}
 </ul>

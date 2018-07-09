@@ -19,6 +19,9 @@ namespace WorldData.Controllers
             ViewData["Message"] = "Your application description page.";
 
             return View(City.GetAll());
+            // string input = Request.Form["contain"];
+            // return View(City.GetByName(input);
+            // public List<City> GetByName(string input);
         }
 
         public IActionResult Countries()
@@ -26,6 +29,20 @@ namespace WorldData.Controllers
             ViewData["Message"] = "Your contact page.";
 
             return View();
+        }
+        public IActionResult Input()
+        {
+          return View();
+        }
+
+        public IActionResult PopCities(int minpop, int maxpop)
+        {
+          return View("Cities", City.GetByPopulation(minpop,maxpop));
+        }
+
+        public IActionResult StartsWith(string start)
+        {
+          return View("Cities", City.GetStart(start));
         }
 
         // public IActionResult Error()

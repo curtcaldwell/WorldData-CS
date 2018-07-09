@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Input";
+}
+<h3>@ViewData["Title"].</h3>
+<h3>@ViewData["Message"]</h3>
+<br>
+      <h1>Population Finder</h1>
+      <form action="/Home/PopCities">
+        <label for="minpop">Min Population</label>
+        <input id="minpop" name="minpop" type="text">
+        <label for="maxpop">Max Population</label>
+        <input id="maxpop" name="maxpop" type="text">
+
+        <button type="submit">Submit</button>
+      </form>
+      <form action="/Home/StartsWith">
+        <label for="start">Enter in the first letters of a city and see what cities start with them!!</label>
+        <input id="start" name="start" type="text">
+
+        <button type="submit">Submit</button>
+      </form>
